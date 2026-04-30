@@ -25,16 +25,15 @@ export function ProjectCard({ project }: Props) {
   const allTech = flattenTech(project.techStack);
 
   return (
-    <>
-    {!imgError && (
-      <Lightbox src={project.thumbnail} alt={project.name} open={lightboxOpen} onClose={() => setLightboxOpen(false)} />
-    )}
     <motion.div
       layout
       whileHover={{ y: -6, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="glass-card overflow-hidden group flex flex-col"
     >
+      {!imgError && (
+        <Lightbox src={project.thumbnail} alt={project.name} open={lightboxOpen} onClose={() => setLightboxOpen(false)} />
+      )}
       {/* Thumbnail */}
       <div className="aspect-video bg-[#0a0f0e] overflow-hidden relative flex items-center justify-center">
         {imgError ? (
@@ -131,6 +130,5 @@ export function ProjectCard({ project }: Props) {
         </div>
       </div>
     </motion.div>
-    </>
   );
 }

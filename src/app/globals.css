@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary — Teal palette */
+  --color-primary-50:  #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #0d9488;
+  --color-primary-700: #0f766e;
+  --color-primary-800: #115e59;
+  --color-primary-900: #134e4a;
+  --color-primary-950: #042f2e;
+
+  /* Font stack */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  /* Custom animations */
+  --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-bounce-slow: bounce 2s infinite;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}
+
+/* ─── Base ─── */
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0f0e;
+  color: #f0fdfa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Hero gradient ─── */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(20, 184, 166, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(13, 148, 136, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(15, 118, 110, 0.08) 0%, transparent 60%),
+    #0a0f0e;
+}
+
+/* ─── Glassmorphism card ─── */
+.glass-card {
+  background-color: rgba(17, 31, 29, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(21, 94, 89, 0.4);
+  border-radius: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.glass-card:hover {
+  border-color: rgba(20, 184, 166, 0.6);
+}
+
+/* ─── Glow text ─── */
+.glow-text {
+  text-shadow: 0 0 30px rgba(20, 184, 166, 0.5);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar         { width: 6px; }
+::-webkit-scrollbar-track   { background: #0a0f0e; }
+::-webkit-scrollbar-thumb   { background: #0d9488; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #14b8a6; }
+
+/* ─── Lightbox override ─── */
+.yarl__container {
+  background: rgba(10, 15, 14, 0.96) !important;
+}

@@ -22,6 +22,7 @@ The system supports multi-branch operations and integrates with barcode scanners
       { category: "DevOps",    items: ["Docker", "AWS ECS", "Nginx"] },
     ],
     status: "completed",
+    visibility: "public",
     featured: true,
     year: 2025,
     liveUrl: "https://example.com",
@@ -71,9 +72,9 @@ The platform handles thousands of products with advanced filtering and search, a
       { category: "DevOps",         items: ["Docker", "AWS EC2", "Nginx"] },
     ],
     status: "completed",
+    visibility: "private",
     featured: true,
     year: 2025,
-    githubUrl: "https://github.com/dikki-ap/ecommerce-platform",
     features: [
       {
         title: "Product Management",
@@ -109,6 +110,7 @@ Handles real-time event streams and guarantees data consistency across distribut
       { category: "DevOps",         items: ["Docker", "Kubernetes", "Rancher", "Jenkins"] },
     ],
     status: "in-progress",
+    visibility: "private",
     featured: true,
     year: 2026,
     features: [

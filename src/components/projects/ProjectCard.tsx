@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ExternalLink, Github, ZoomIn } from "lucide-react";
+import { ExternalLink, Github, Lock, ZoomIn } from "lucide-react";
 import { Project } from "@/types";
 import { flattenTech } from "@/data/projects";
 import { Lightbox } from "@/components/ui/Lightbox";
@@ -58,11 +58,17 @@ export function ProjectCard({ project }: Props) {
           </>
         )}
 
-        {/* Status badge */}
-        <div className="absolute top-3 right-3">
+        {/* Badges */}
+        <div className="absolute top-3 right-3 flex flex-col items-end gap-1.5">
           <span className={`text-xs px-2 py-1 rounded-full font-medium border ${status.className}`}>
             {status.label}
           </span>
+          {project.visibility === "private" && (
+            <span className="flex items-center gap-1 text-xs px-2 py-1 rounded-full font-medium border bg-gray-900/70 text-gray-400 border-gray-700/50">
+              <Lock className="w-3 h-3" />
+              Private
+            </span>
+          )}
         </div>
       </div>
 
@@ -105,7 +111,7 @@ export function ProjectCard({ project }: Props) {
           >
             View Details
           </Link>
-          {project.githubUrl && (
+          {project.visibility === "public" && project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
@@ -116,7 +122,7 @@ export function ProjectCard({ project }: Props) {
               <Github className="w-4 h-4" />
             </a>
           )}
-          {project.liveUrl && (
+          {project.visibility === "public" && project.liveUrl && (
             <a
               href={project.liveUrl}
               target="_blank"

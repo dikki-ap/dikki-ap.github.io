@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github, Calendar, ZoomIn } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Calendar, Lock, ZoomIn } from "lucide-react";
 import { Project } from "@/types";
 import { FeatureAccordion } from "./FeatureAccordion";
 import { Lightbox } from "@/components/ui/Lightbox";
@@ -60,6 +60,12 @@ export function ProjectDetailClient({ project }: Props) {
               <span className={`text-xs px-3 py-1 rounded-full font-medium border ${status.className}`}>
                 {status.label}
               </span>
+              {project.visibility === "private" && (
+                <span className="flex items-center gap-1 text-xs px-3 py-1 rounded-full font-medium border bg-gray-900/70 text-gray-400 border-gray-700/50">
+                  <Lock className="w-3 h-3" />
+                  Private
+                </span>
+              )}
               <div className="flex items-center gap-1 text-primary-200/40 text-sm">
                 <Calendar className="w-4 h-4" />
                 {project.year}
@@ -73,7 +79,7 @@ export function ProjectDetailClient({ project }: Props) {
 
             {/* Links */}
             <div className="flex flex-wrap items-center gap-3">
-              {project.liveUrl && (
+              {project.visibility === "public" && project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
@@ -84,7 +90,7 @@ export function ProjectDetailClient({ project }: Props) {
                   Live Demo
                 </a>
               )}
-              {project.githubUrl && (
+              {project.visibility === "public" && project.githubUrl && (
                 <a
                   href={project.githubUrl}
                   target="_blank"

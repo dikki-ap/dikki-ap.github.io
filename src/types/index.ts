@@ -22,6 +22,7 @@ export interface Project {
   githubUrl?: string;
   year: number;
   status: "completed" | "in-progress" | "archived";
+  visibility: "public" | "private";
   featured: boolean;
 }
 

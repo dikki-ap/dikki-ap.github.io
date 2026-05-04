@@ -47,6 +47,7 @@ body {
   color: #f0fdfa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ─── Hero gradient ─── */

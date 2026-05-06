@@ -112,7 +112,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
       { category: "DevOps",           items: ["Docker"] },
     ],
     status: "completed",
-    visibility: "public",
+    visibility: "private",
     featured: true,
     year: 2026,
     githubUrl: "https://github.com/dikki-ap/job-portal",

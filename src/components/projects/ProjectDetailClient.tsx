@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ExternalLink, Github, Calendar, Lock, ZoomIn } from "lucide-react";
 import { Project } from "@/types";
 import { FeatureAccordion } from "./FeatureAccordion";
@@ -120,9 +121,11 @@ export function ProjectDetailClient({ project }: Props) {
               </div>
             ) : (
               <>
-                <img
+                <Image
                   src={project.thumbnail}
                   alt={project.name}
+                  width={1280}
+                  height={720}
                   className="w-full"
                   onError={() => setImgError(true)}
                 />

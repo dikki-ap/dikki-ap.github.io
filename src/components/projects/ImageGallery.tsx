@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -27,17 +28,14 @@ export function ImageGallery({ images, altPrefix = "Screenshot" }: Props) {
               setIndex(i);
               setOpen(true);
             }}
-            className="aspect-video rounded-lg overflow-hidden border border-primary-900/40 hover:border-primary-500/50 transition-all duration-200 group bg-[#0a0f0e] flex items-center justify-center"
+            className="relative aspect-video rounded-lg overflow-hidden border border-primary-900/40 hover:border-primary-500/50 transition-all duration-200 group bg-[#0a0f0e]"
           >
-            <img
+            <Image
               src={src}
               alt={`${altPrefix} ${i + 1}`}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              onError={(e) => {
-                const img = e.target as HTMLImageElement;
-                img.style.display = "none";
-                img.parentElement!.innerHTML = `<span style="color:#0d9488;font-size:1.5rem;opacity:0.4">${i + 1}</span>`;
-              }}
+              fill
+              sizes="(max-width: 768px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </button>
         ))}

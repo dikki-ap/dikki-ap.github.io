@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, Github, Lock, ZoomIn } from "lucide-react";
 import { Project } from "@/types";
 import { flattenTech } from "@/data/projects";
@@ -42,10 +43,12 @@ export function ProjectCard({ project }: Props) {
           </span>
         ) : (
           <>
-            <img
+            <Image
               src={project.thumbnail}
               alt={project.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
               onError={() => setImgError(true)}
             />
             {/* Zoom overlay on hover */}

@@ -120,7 +120,7 @@ export function Lightbox({ src, alt, open, onClose }: Props) {
           <div className="absolute inset-0 bg-black/85 backdrop-blur-sm" onClick={onClose} />
 
           {/* Controls */}
-          <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+          <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
             <div className="flex items-center gap-1 bg-black/50 rounded-full px-1 py-1">
               <button
                 onClick={() => zoom(-ZOOM_STEP)}

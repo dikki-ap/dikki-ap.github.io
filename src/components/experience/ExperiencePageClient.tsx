@@ -9,8 +9,9 @@ export function ExperiencePageClient() {
   const totalYears = (() => {
     const start = new Date("2023-05-01");
     const now = new Date();
-    const diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365);
-    return diff.toFixed(1);
+    const diff =
+      (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365);
+    return Math.floor(diff);
   })();
 
   return (
@@ -28,10 +29,12 @@ export function ExperiencePageClient() {
               {totalYears}+ Years of Experience
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#f0fdfa] mb-4">
-              Work <span className="text-primary-400 glow-text">Experience</span>
+              Work{" "}
+              <span className="text-primary-400 glow-text">Experiences</span>
             </h1>
             <p className="text-primary-200/60 max-w-xl mx-auto">
-              End-to-end ownership across every role — from requirements to production.
+              End-to-end ownership across every role — from requirements to
+              production.
             </p>
           </div>
         </div>

@@ -13,16 +13,43 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Code2 className="w-5 h-5 text-primary-500" />
             <span className="font-bold text-primary-400">{profile.name}</span>
-            <span className="text-primary-200/30 text-sm ml-1">— {profile.title}</span>
+            <span className="text-primary-200/30 text-sm ml-1">
+              — {profile.title}
+            </span>
           </div>
 
           {/* Nav links */}
           <nav className="flex items-center gap-6 text-sm text-primary-200/50">
-            <Link href="/#about"     className="hover:text-primary-400 transition-colors">About</Link>
-            <Link href="/#skills"    className="hover:text-primary-400 transition-colors">Skills</Link>
-            <Link href="/experience" className="hover:text-primary-400 transition-colors">Experience</Link>
-            <Link href="/projects"   className="hover:text-primary-400 transition-colors">Projects</Link>
-            <Link href="/#contact"   className="hover:text-primary-400 transition-colors">Contact</Link>
+            <Link
+              href="/#about"
+              className="hover:text-primary-400 transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/#skills"
+              className="hover:text-primary-400 transition-colors"
+            >
+              Skills
+            </Link>
+            <Link
+              href="/experience"
+              className="hover:text-primary-400 transition-colors"
+            >
+              Experiences
+            </Link>
+            <Link
+              href="/projects"
+              className="hover:text-primary-400 transition-colors"
+            >
+              Projects
+            </Link>
+            <Link
+              href="/#contact"
+              className="hover:text-primary-400 transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* Social links */}

@@ -126,7 +126,7 @@ export function ProjectDetailClient({ project }: Props) {
                   alt={project.name}
                   width={1280}
                   height={720}
-                  className="w-full"
+                  className="w-full max-h-[480px] object-cover object-top"
                   onError={() => setImgError(true)}
                 />
                 <button
@@ -147,9 +147,17 @@ export function ProjectDetailClient({ project }: Props) {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl font-bold text-[#f0fdfa] mb-4">About this Project</h2>
-            <p className="text-primary-200/70 leading-relaxed text-lg whitespace-pre-line">
-              {project.description}
-            </p>
+            <div className="text-primary-200/70 leading-relaxed text-lg space-y-4">
+              {project.description.split("\n\n").map((para, i) => (
+                <p key={i}>
+                  {para.split(/\*\*(.+?)\*\*/g).map((chunk, j) =>
+                    j % 2 === 1
+                      ? <strong key={j} className="text-primary-300 font-semibold">{chunk}</strong>
+                      : chunk
+                  )}
+                </p>
+              ))}
+            </div>
           </motion.div>
 
           {/* Tech Stack — categorized breakdown */}

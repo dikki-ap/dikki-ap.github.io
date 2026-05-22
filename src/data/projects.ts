@@ -260,7 +260,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
           "Authentication via Keycloak OIDC with mandatory TOTP (2FA) enforced on first login and role sync on every request. Documents are stored in MinIO/S3 with 15-minute presigned URLs and per-user folder isolation. All entity changes are tracked in an automatic audit log.",
         images: [
           "/projects/job-portal/feature-login-page.png",
-          "/projects/job-portal/feature-keycloack-login.png",
+          "/projects/job-portal/feature-keycloak-login.png",
           "/projects/job-portal/feature-keycloak-login-otp.png",
           "/projects/job-portal/feature-keycloak-register.png",
           "/projects/job-portal/feature-object-storage.png",

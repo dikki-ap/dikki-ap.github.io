@@ -16,7 +16,7 @@ export const profile: Profile = {
   email: "dikki.1710@gmail.com",
   github: "https://github.com/dikki-ap",
   linkedin: "https://linkedin.com/in/dikki-ap",
-  profileImage: "/profile.jpg",
+  profileImage: "/profile.png",
 };
 
 export const skills: Skill[] = [

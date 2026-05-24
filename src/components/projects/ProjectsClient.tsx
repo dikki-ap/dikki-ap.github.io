@@ -25,19 +25,19 @@ export function ProjectsClient() {
     });
 
     return Object.fromEntries(
-      categoryOrder.map((cat) => [cat, Array.from(groups[cat]).sort()])
+      categoryOrder.map((cat) => [cat, Array.from(groups[cat]).sort()]),
     ) as Record<string, string[]>;
   }, []);
 
   const handleToggle = (tech: string) =>
     setSelected((prev) =>
-      prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech]
+      prev.includes(tech) ? prev.filter((t) => t !== tech) : [...prev, tech],
     );
 
   const filteredProjects = useMemo(() => {
     if (selected.length === 0) return projects;
     return projects.filter((p) =>
-      selected.some((tech) => flattenTech(p.techStack).includes(tech))
+      selected.some((tech) => flattenTech(p.techStack).includes(tech)),
     );
   }, [selected]);
 
@@ -55,7 +55,10 @@ export function ProjectsClient() {
               All <span className="text-primary-400 glow-text">Projects</span>
             </h1>
             <p className="text-primary-200/60 max-w-xl mx-auto">
-              A complete list of projects I&apos;ve built — from enterprise systems to side projects.
+              A complete list of personal, learning, and portfolio projects.
+              Company-related work is represented only as high-level case
+              studies without confidential source code, data, or business
+              information.
             </p>
           </div>
         </div>
@@ -82,7 +85,8 @@ export function ProjectsClient() {
                 : `${filteredProjects.length} of ${projects.length} projects`}
               {selected.length > 0 && (
                 <span className="text-primary-500 ml-1">
-                  — filtered by {selected.length} tech{selected.length > 1 ? "nologies" : "nology"}
+                  — filtered by {selected.length} tech
+                  {selected.length > 1 ? "nologies" : "nology"}
                 </span>
               )}
             </p>
@@ -109,7 +113,9 @@ export function ProjectsClient() {
                 animate={{ opacity: 1 }}
                 className="text-center py-20 space-y-3"
               >
-                <p className="text-primary-200/40 text-lg">No projects match your filters.</p>
+                <p className="text-primary-200/40 text-lg">
+                  No projects match your filters.
+                </p>
                 <button
                   onClick={() => setSelected([])}
                   className="text-sm text-primary-500 hover:text-primary-400 underline underline-offset-2 transition-colors"

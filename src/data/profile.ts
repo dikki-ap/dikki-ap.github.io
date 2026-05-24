@@ -10,7 +10,7 @@ export const profile: Profile = {
     "Backend & Cloud Engineering",
     "DevOps Automation",
   ],
-  bio: "Software Engineer specializing in enterprise manufacturing systems, full-stack web development, system integration, and DevOps automation. Experienced in developing production-grade applications using ASP.NET Core, React.js, Java Spring Boot, SQL-based relational databases, Docker, Kubernetes, and AWS. I focus on building reliable business applications, optimizing system performance, automating deployment workflows, and supporting stable production operations in enterprise environments.",
+  bio: "I’m a Software Engineer specializing in enterprise manufacturing systems, full-stack web development, system integration, and DevOps automation. I build production-grade applications using ASP.NET Core, React.js, Java Spring Boot, SQL-based relational databases, Docker, Kubernetes, and AWS. My focus is on transforming business processes into reliable software systems, optimizing performance, automating deployment workflows, and supporting stable production operations.",
   currentWork: "Software Engineer at Hyundai AutoEver Indonesia",
   location: "Indonesia",
   email: "dikki.1710@gmail.com",

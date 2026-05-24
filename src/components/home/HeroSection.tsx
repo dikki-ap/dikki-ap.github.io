@@ -81,16 +81,6 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Bio */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-xl text-primary-200/70 text-lg leading-relaxed"
-          >
-            {profile.bio}
-          </motion.p>
-
           {/* CTA buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

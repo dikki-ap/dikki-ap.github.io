@@ -92,6 +92,19 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
         ],
       },
       {
+        title: "Email Notifications",
+        description:
+          "Every key event in the recruitment lifecycle triggers an automatic branded email. Candidates receive a confirmation when their application is submitted, then individual pass or fail notifications for each hiring step — subject line and rich-text body are configured per step via the Tiptap editor with placeholder support (candidate name, job title, company name, etc.). Approvers receive an email with a direct link to review the job post when an approval request reaches their level. Direct accept/reject actions outside the step flow and talent pool re-engagement each send their own dedicated email. All emails are wrapped in a consistent branded HTML container using the company's primary color, ensuring every notification looks on-brand without any additional configuration.",
+        images: [
+          "/projects/job-portal/feature-mail-job-approval.png",
+          "/projects/job-portal/feature-mail-application-received.png",
+          "/projects/job-portal/feature-mail-application-step-passed.png",
+          "/projects/job-portal/feature-mail-application-final-step-passed.png",
+          "/projects/job-portal/feature-mail-application-step-failed.png",
+          "/projects/job-portal/feature-mail-talent-pool-reengage.png",
+        ],
+      },
+      {
         title: "Application Management & Rating",
         description:
           "HR views all applications in a filterable table with candidate details including education history. Each application can be rated from 1–10 with a note. Direct accept/reject actions are also available outside the step flow.",

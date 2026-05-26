@@ -49,12 +49,32 @@ export const experiences: Experience[] = [
           "Supported CDC and integration server monitoring to maintain stable communication between MES, enterprise systems, and HQ-managed platforms.",
         techStack: ["Java", "Spring Boot", "SQL", "CDC", "System Integration"],
       },
+      {
+        name: "MES Web – Multi-Schema Table Data Management",
+        description:
+          "Extended the Table Data Management module to support multiple database schemas. Previously limited to a single schema via connection string, the module was enhanced with a schema selection dropdown allowing navigation into schema-specific master data. Table deletion operations are executed through Stored Procedures based on configurable conditions defined in the master data, enabling controlled and auditable data cleanup across multiple schemas.",
+        techStack: ["Java", "Spring Boot", "Tibero"],
+      },
+      {
+        name: "System Monitoring WPF – Enhancements & Teams Integration",
+        description:
+          "Resolved UI thread freezes caused by synchronous data loading on large datasets by refactoring blocking calls to async methods, keeping the UI responsive during heavy operations. Extended the application with new monitoring modules and refactored existing forms to support initial alarm detection and a report function. Integrated real-time monitoring notifications with Microsoft Teams via a Java Spring Boot scheduler that sends structured webhook messages on alarm events.",
+        techStack: [
+          "WPF",
+          "C#",
+          "Java",
+          "Spring Boot",
+          "Microsoft Teams Webhooks API",
+        ],
+      },
     ],
     techStack: [
       "Java",
       "Spring Boot",
       "MySQL / MariaDB",
       "Tibero",
+      "WPF",
+      "C#",
       "Docker",
       "Kubernetes",
       "Jenkins",

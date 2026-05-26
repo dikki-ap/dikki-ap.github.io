@@ -215,7 +215,7 @@ All data is stored locally on your device (SQLite via Drift) and syncs to a spre
       },
       { category: "ML / OCR", items: ["Google ML Kit"] },
     ],
-    status: "completed",
+    status: "in-progress",
     visibility: "public",
     featured: true,
     year: 2026,

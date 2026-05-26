@@ -41,12 +41,12 @@ function FeaturedCard({ project }: { project: Project }) {
   const allTech = flattenTech(project.techStack);
 
   return (
-    <div className="group">
+    <div className="group h-full">
       <motion.div
         variants={cardVariants}
         whileHover={{ y: -6, scale: 1.01 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="glass-card overflow-hidden flex flex-col"
+        className="glass-card overflow-hidden flex flex-col h-full"
       >
         {!imgError && (
           <Lightbox
@@ -138,7 +138,7 @@ function FeaturedCard({ project }: { project: Project }) {
             >
               View Details
             </Link>
-            {project.githubUrl && (
+            {project.visibility === "public" && project.githubUrl && (
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -148,7 +148,7 @@ function FeaturedCard({ project }: { project: Project }) {
                 <Github className="w-4 h-4" />
               </a>
             )}
-            {project.liveUrl && (
+            {project.visibility === "public" && project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"

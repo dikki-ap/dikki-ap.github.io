@@ -26,12 +26,12 @@ export function ProjectCard({ project }: Props) {
   const allTech = flattenTech(project.techStack);
 
   return (
-    <div className="group">
+    <div className="group h-full">
     <motion.div
       layout
       whileHover={{ y: -6, scale: 1.01 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="glass-card overflow-hidden flex flex-col"
+      className="glass-card overflow-hidden flex flex-col h-full"
     >
       {!imgError && (
         <Lightbox src={project.thumbnail} alt={project.name} open={lightboxOpen} onClose={() => setLightboxOpen(false)} />

@@ -11,7 +11,7 @@ interface Props {
 }
 
 export function FeatureAccordion({ features }: Props) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div className="space-y-3">

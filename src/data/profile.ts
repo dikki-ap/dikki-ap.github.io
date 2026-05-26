@@ -7,6 +7,7 @@ export const profile: Profile = {
     "Software Engineer",
     "Enterprise Manufacturing Systems",
     "System Integration",
+    "End-To-End Solutions",
     "Backend & Cloud Engineering",
     "DevOps Automation",
   ],
@@ -21,10 +22,8 @@ export const profile: Profile = {
 
 export const skills: Skill[] = [
   // Backend
-  { name: "ASP.NET Core / C#", category: "backend", icon: "code-2" },
+  { name: "C# / ASP.NET Core", category: "backend", icon: "code-2" },
   { name: "Java / Spring Boot", category: "backend", icon: "coffee" },
-  { name: "REST APIs", category: "backend", icon: "network" },
-  { name: "System Integration", category: "backend", icon: "share-2" },
 
   // Frontend
   { name: "React.js", category: "frontend", icon: "atom" },
@@ -33,9 +32,9 @@ export const skills: Skill[] = [
   { name: "Tailwind CSS", category: "frontend", icon: "paintbrush" },
 
   // Database
+  { name: "MySQL / MariaDB", category: "database", icon: "database" },
   { name: "SQL Server", category: "database", icon: "database" },
   { name: "PostgreSQL", category: "database", icon: "database" },
-  { name: "MySQL / MariaDB", category: "database", icon: "database" },
   { name: "Tibero", category: "database", icon: "database" },
 
   // DevOps & Cloud

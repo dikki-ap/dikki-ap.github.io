@@ -8,12 +8,12 @@ export const experiences: Experience[] = [
     period: "Nov 2025 – Present",
     current: true,
     description:
-      "Developing and maintaining enterprise MES applications and backend services in a large-scale manufacturing environment. Focused on production reliability, system integration, monitoring automation, CI/CD workflows, and containerized deployments.",
+      "Developing and maintaining enterprise MES applications and backend services in a large-scale manufacturing environment. Focused on production reliability, system integration, monitoring automation, and CI/CD infrastructure — including a large-scale pipeline migration across GitLab, Jenkins, Harbor, and Nexus, alongside a full ArgoCD implementation for automated GitOps-based deployments to Rancher.",
     responsibilities: [
       "Developed and maintained enterprise MES applications and backend services using Java Spring Boot to support reliable production operations across manufacturing environments.",
       "Designed and implemented monitoring, alerting, and automation workflows using Spring Boot schedulers, stored procedures, and Microsoft Teams webhooks to improve incident visibility and response time.",
       "Optimized backend logic, SQL queries, and integration workflows, improving processing efficiency by 20–40%.",
-      "Designed and maintained CI/CD deployment workflows using GitLab, Jenkins, Docker, Harbor, Kubernetes, and Rancher for controlled and repeatable production releases.",
+      "Led a large-scale CI/CD infrastructure migration: standardized GitLab group and project structures, rewrote Jenkinsfiles with clearly defined stage-by-stage pipelines for better visibility and maintainability, standardized Harbor container registry repositories with consistent naming conventions, managed private artifact repositories in Nexus, and implemented ArgoCD from scratch — enabling automated GitOps-based deployments to Rancher-managed Kubernetes clusters where no such automation previously existed.",
       "Implemented release versioning, rollback procedures, and deployment safeguards to reduce production risk and support faster incident recovery.",
       "Supported system integration, CDC monitoring, and cross-platform communication between MES, enterprise systems, and HQ-managed platforms.",
       "Supported containerized application environments to improve deployment reliability, scalability, and production maintainability.",
@@ -31,14 +31,16 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        name: "CI/CD Deployment Workflow",
+        name: "CI/CD Infrastructure Migration & ArgoCD Implementation",
         description:
-          "Designed and maintained controlled deployment workflows from GitLab to Jenkins, Docker, Harbor, Kubernetes, and Rancher to support repeatable production releases, versioning, and rollback readiness.",
+          "Led a comprehensive migration and modernization of the organization's CI/CD infrastructure. Standardized GitLab group and project structures across all repositories. Rewrote and standardized Jenkinsfiles with explicit, stage-by-stage pipeline definitions — replacing inconsistent legacy scripts with clear, maintainable workflows. Standardized Harbor container registry repositories with consistent naming conventions and access controls. Introduced and managed private artifact repositories in Nexus for internal dependency management. Designed and implemented ArgoCD from the ground up — the organization had no existing GitOps tooling — enabling automated, declarative application deployments to Rancher-managed Kubernetes clusters.",
         techStack: [
           "GitLab",
           "Jenkins",
           "Docker",
           "Harbor",
+          "Nexus",
+          "ArgoCD",
           "Kubernetes",
           "Rancher",
         ],
@@ -79,6 +81,8 @@ export const experiences: Experience[] = [
       "Kubernetes",
       "Jenkins",
       "Harbor",
+      "Nexus",
+      "ArgoCD",
       "Rancher",
     ],
   },

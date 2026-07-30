@@ -45,5 +45,7 @@ export const skills: Skill[] = [
   { name: "GitLab CI/CD", category: "devops", icon: "git-branch" },
   { name: "GitHub Actions", category: "devops", icon: "github" },
   { name: "Harbor", category: "devops", icon: "package" },
+  { name: "Nexus", category: "devops", icon: "archive" },
+  { name: "ArgoCD", category: "devops", icon: "refresh-cw" },
   { name: "Rancher", category: "devops", icon: "server" },
 ];

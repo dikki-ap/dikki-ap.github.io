@@ -82,7 +82,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
       {
         title: "Step-based Hiring Pipeline",
         description:
-          "Each job post defines an ordered set of hiring steps. HR evaluates candidates step by step — pass or fail — and the system sends branded email notifications to the candidate on each outcome. Bulk accept/reject/step-pass actions are available for high-volume positions.",
+          "Each job post defines an ordered set of hiring steps. HR evaluates candidates step by step — pass or fail — and the system sends branded email notifications to the candidate on each outcome. Interview scheduling per step is supported directly from the step evaluation view. Bulk accept/reject/step-pass actions are available for high-volume positions.",
         images: [
           "/projects/job-portal/feature-job-management-list.png",
           "/projects/job-portal/feature-job-management-create-1.png",
@@ -107,7 +107,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
       {
         title: "Application Management & Rating",
         description:
-          "HR views all applications in a filterable table with candidate details including education history. Each application can be rated from 1–10 with a note. Direct accept/reject actions are also available outside the step flow.",
+          "HR views all applications in a filterable table with candidate details including education history and application source (LinkedIn, Indeed, etc.). Each application can be rated 1–10 with a note; the Department Manager's rating is also visible in the list for quick comparison. Direct accept/reject actions are available outside the step flow. HR can upload, replace, and delete company-specific documents per application — visible only to internal users, never to candidates.",
         images: [
           "/projects/job-portal/feature-applications-list.png",
           "/projects/job-portal/feature-applications-multi-action.png",
@@ -126,7 +126,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
       {
         title: "Analytics Dashboard",
         description:
-          "Visual hiring funnel showing application counts by status, pass/fail rates per hiring step, and trend charts powered by Recharts. Gives HR a quick overview of recruitment health across all open positions.",
+          "Visual hiring funnel showing application counts by status, pass/fail rates per hiring step, application source distribution (LinkedIn, Indeed, referral, etc.), and dropout rate trends — all powered by Recharts. Supports date range filtering (30 days to 1 year) and one-click XLSX export. Gives HR a quick read on recruitment health and candidate source effectiveness across all open positions.",
         images: [
           "/projects/job-portal/feature-analytics-1.png",
           "/projects/job-portal/feature-analytics-2.png",
@@ -141,7 +141,7 @@ Built with Clean Architecture and CQRS on the backend (ASP.NET Core 10 + MediatR
       {
         title: "Department Managers",
         description:
-          "Admin assigns department managers by email (many-to-many with departments). Managers can log in using their candidate account and access a scoped view showing only applications from their assigned departments — no full HR dashboard needed.",
+          "Admin assigns department managers by email (many-to-many with departments). Managers log in with their candidate account and access a scoped view showing only applications from their assigned departments. Managers can add their own 1–10 rating per applicant (visible alongside the HR rating) and manage company-specific documents — upload, replace, and delete — without needing full HR dashboard access.",
         images: [
           "/projects/job-portal/master-department-managers.png",
           "/projects/job-portal/feature-department-managers.png",

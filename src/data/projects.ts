@@ -457,6 +457,120 @@ All data is stored locally on your device (SQLite via Drift) and syncs to a spre
       },
     ],
   },
+  {
+    id: "4",
+    slug: "us-stock-research-platform",
+    name: "US Stock Research Platform",
+    shortDescription:
+      "A personal investment research platform for the US stock market — live quotes, candlestick charts, technical indicators, earnings calendar, and automated background data collection.",
+    description: `A personal investment research platform for the US stock market built on ASP.NET Core 10 and React 18. Automatically collects historical market data, builds a private stock database, and generates trading analytics to support rational, data-backed investment decisions.
+
+The platform is not a trading bot — it is a research tool. Every decision is backed by data: historical OHLCV prices, corporate events, earnings results, and macro context. All data is sourced from Yahoo Finance (primary) and Finnhub (news, earnings, live quotes).
+
+The backend runs a set of fully automated Hangfire background jobs that collect minute candles during market hours, aggregate session OHLCV, calculate end-of-day metrics (RSI, MACD, EMA, ATR, Gap%), fetch company news, and sync upcoming earnings calendars — all on a configurable schedule with Eastern Time awareness. Jobs can also be triggered manually from the frontend or the Hangfire dashboard.
+
+Built with Clean Architecture (Domain / Application / Infrastructure / Api), EF Core migrations, and a React 18 + TypeScript + Vite frontend.`,
+    thumbnail: "/projects/us-stock-research-platform/thumbnail.png",
+    techStack: [
+      {
+        category: "Backend",
+        items: ["ASP.NET Core 10", "C#", "Entity Framework Core"],
+      },
+      { category: "Database", items: ["MariaDB 11.4"] },
+      { category: "Cache & Jobs", items: ["Redis (optional)", "Hangfire"] },
+      {
+        category: "Frontend",
+        items: ["React 18", "TypeScript", "Vite", "Tailwind CSS"],
+      },
+      {
+        category: "Charts & Indicators",
+        items: [
+          "TradingView Lightweight Charts v5",
+          "Skender.Stock.Indicators",
+        ],
+      },
+      { category: "Data Sources", items: ["Yahoo Finance", "Finnhub"] },
+    ],
+    status: "completed",
+    visibility: "public",
+    featured: true,
+    year: 2026,
+    githubUrl: "https://github.com/dikki-ap/us-stock-research-platform",
+    features: [
+      {
+        title: "Live Quotes & Market Status",
+        description:
+          "Real-time stock price with pre-market and after-hours support via Finnhub WebSocket. Displays current price, change %, previous close, and a LIVE badge during market hours with Eastern Time awareness. Automatically shows pre/post-market price outside regular session hours.",
+        images: [],
+      },
+      {
+        title: "Candlestick Charts with Volume Overlay",
+        description:
+          "Interactive candlestick chart powered by TradingView Lightweight Charts v5. Supports daily and intraday timeframes. Volume is overlaid as a histogram on the price pane. Price alert markers are plotted directly on the chart. Smooth dark theme with responsive layout.",
+        images: [],
+      },
+      {
+        title: "Technical Indicators",
+        description:
+          "Calculated server-side on every End-of-Day run using Skender.Stock.Indicators: RSI (14), MACD (12/26/9), EMA 20/50/200, ATR (14), Gap % from previous close, and Relative Strength vs QQQ. All indicators are stored per symbol and exposed via the metrics API.",
+        images: [],
+      },
+      {
+        title: "Earnings Calendar — All US Stocks",
+        description:
+          "Upcoming earnings calendar for all US-listed stocks fetched from Finnhub, showing report date, BMO / AMC / DMH timing, estimated EPS, and days until earnings. Results are split into two sections: watchlist symbols highlighted at the top, and all other US stocks below. Watchlist-only recent results show actual vs estimated EPS with Beat / Miss badge and surprise %.",
+        images: [],
+      },
+      {
+        title: "Excel Export — Earnings Calendar",
+        description:
+          "One-click client-side export of the full upcoming earnings calendar to a .xlsx file using SheetJS CE (Apache 2.0). Generates two sheets — 'In Watchlist' and 'Other US Stocks' — with all columns including days until earnings and report timing.",
+        images: [],
+      },
+      {
+        title: "Sector Heatmap — Semiconductors",
+        description:
+          "Semiconductor comparison table showing all tracked chip stocks side-by-side with period returns (1D, 1W, 1M, 3M, 6M, 1Y), RSI, ATR, Gap %, and Relative Strength vs QQQ. Color-coded by performance for a quick visual read of sector rotation.",
+        images: [],
+      },
+      {
+        title: "Price Correlation Matrix",
+        description:
+          "Pearson correlation heatmap across all watchlist symbols for a selected lookback period. Identifies which stocks move together and which are uncorrelated — useful for portfolio diversification analysis. Computed server-side from historical daily close prices.",
+        images: [],
+      },
+      {
+        title: "News & Sentiment Scoring",
+        description:
+          "Company-specific news fetched every 30 minutes from Finnhub. Each article is scored for bullish / bearish sentiment and displayed with headline, source, and timestamp. Sentiment trend over time is visualized as a line chart.",
+        images: [],
+      },
+      {
+        title: "Daily Market Report",
+        description:
+          "Auto-generated market summary at 5:30 PM ET every trading day. Reports top gainers, top losers, gap up / gap down stocks, and volume leaders across all tracked symbols. Historical reports are stored and retrievable by date.",
+        images: [],
+      },
+      {
+        title: "Trading Journal",
+        description:
+          "Full CRUD trading journal with entry and exit price, quantity, direction, strategy tag, and notes per trade. Aggregated statistics: win rate, average profit, profit factor, and strategy performance breakdown. Separate view for open positions vs closed trades.",
+        images: [],
+      },
+      {
+        title: "Strategy Backtesting",
+        description:
+          "5 built-in backtesting strategies runnable on any watchlist symbol over a custom date range: EMA Crossover (20/50), RSI Mean Reversion, MACD Cross, Gap Up, and Gap Down. Returns trade-by-trade results with entry/exit dates, return %, and summary statistics.",
+        images: [],
+      },
+      {
+        title: "Automated Background Jobs (Hangfire)",
+        description:
+          "Fully automated data pipeline via Hangfire InMemory scheduler with ET timezone awareness: minute candles every market minute, session OHLCV aggregation hourly, End-of-Day OHLCV at 4:35 PM ET, metrics calculation at 5:00 PM ET, daily report at 5:30 PM ET, news every 30 minutes, and earnings sync every Sunday. All jobs are manually triggerable from the frontend Jobs page or the Hangfire dashboard.",
+        images: [],
+      },
+    ],
+  },
 ];
 
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);

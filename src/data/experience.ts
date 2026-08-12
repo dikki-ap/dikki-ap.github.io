@@ -3,19 +3,19 @@ import { Experience } from "@/types";
 export const experiences: Experience[] = [
   {
     company: "Hyundai AutoEver Indonesia",
-    role: "Software Engineer / MES System Analyst",
+    role: "Software Engineer",
     location: "South Jakarta, Indonesia",
     period: "Nov 2025 – Present",
     current: true,
     description:
-      "Developing and maintaining enterprise MES applications and backend services in a large-scale manufacturing environment. Focused on production reliability, system integration, monitoring automation, and CI/CD infrastructure — including a large-scale pipeline migration across GitLab, Jenkins, Harbor, and Nexus, alongside a full ArgoCD implementation for automated GitOps-based deployments to Rancher.",
+      "Developing and maintaining enterprise backend services and daemon processes in a large-scale enterprise environment. Focused on production reliability, system integration, monitoring automation, and CI/CD infrastructure — including a large-scale GitOps platform migration across GitLab EE, Jenkins, Nexus, Harbor, and ArgoCD, enabling automated deployments to Rancher-managed Kubernetes clusters.",
     responsibilities: [
-      "Developed and maintained enterprise MES applications and backend services using Java Spring Boot to support reliable production operations across manufacturing environments.",
+      "Developed and maintained enterprise backend services and daemon processes using Java Spring Boot, ensuring reliable data synchronization, scheduling, and integration across cross-platform enterprise systems.",
       "Designed and implemented monitoring, alerting, and automation workflows using Spring Boot schedulers, stored procedures, and Microsoft Teams webhooks to improve incident visibility and response time.",
       "Optimized backend logic, SQL queries, and integration workflows, improving processing efficiency by 20–40%.",
       "Led a large-scale CI/CD infrastructure migration: standardized GitLab group and project structures, rewrote Jenkinsfiles with clearly defined stage-by-stage pipelines for better visibility and maintainability, standardized Harbor container registry repositories with consistent naming conventions, managed private artifact repositories in Nexus, and implemented ArgoCD from scratch — enabling automated GitOps-based deployments to Rancher-managed Kubernetes clusters where no such automation previously existed.",
       "Implemented release versioning, rollback procedures, and deployment safeguards to reduce production risk and support faster incident recovery.",
-      "Supported system integration, CDC monitoring, and cross-platform communication between MES, enterprise systems, and HQ-managed platforms.",
+      "Supported system integration and cross-platform communication across enterprise systems and HQ-managed platforms, ensuring data consistency and operational continuity.",
       "Supported containerized application environments to improve deployment reliability, scalability, and production maintainability.",
     ],
     projects: [
@@ -46,13 +46,25 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        name: "CDC & Enterprise System Integration Monitoring",
+        name: "Enterprise System Integration Monitoring",
         description:
-          "Supported CDC and integration server monitoring to maintain stable communication between MES, enterprise systems, and HQ-managed platforms.",
-        techStack: ["Java", "Spring Boot", "SQL", "CDC", "System Integration"],
+          "Supported system integration and cross-platform communication monitoring to maintain stable data flow across enterprise systems and HQ-managed platforms, ensuring data consistency and operational continuity.",
+        techStack: ["Java", "Spring Boot", "SQL", "System Integration"],
       },
       {
-        name: "MES Web – Multi-Schema Table Data Management",
+        name: "DB Lock Kill Implementation",
+        description:
+          "Designed and implemented a self-service DB lock management interface enabling operators to identify and terminate blocking database sessions directly from the application UI during night shifts — eliminating dependency on the infrastructure team for on-call intervention and preventing production downtime caused by unresolved lock contention.",
+        techStack: ["Java", "Spring Boot", "SQL", "Tibero"],
+      },
+      {
+        name: "Docker Image Size Optimization",
+        description:
+          "Analyzed and restructured Docker build configurations for backend alarm services, reducing image sizes by up to 70% through multi-stage builds and dependency pruning — significantly improving deployment speed and registry storage efficiency.",
+        techStack: ["Docker", "Harbor"],
+      },
+      {
+        name: "Enterprise Web – Multi-Schema Table Data Management",
         description:
           "Extended the Table Data Management module to support multiple database schemas. Previously limited to a single schema via connection string, the module was enhanced with a schema selection dropdown allowing navigation into schema-specific master data. Table deletion operations are executed through Stored Procedures based on configurable conditions defined in the master data, enabling controlled and auditable data cleanup across multiple schemas.",
         techStack: ["Java", "Spring Boot", "Tibero"],
@@ -119,7 +131,7 @@ export const experiences: Experience[] = [
       {
         name: "E-Leave Project – Employee Leave Management System",
         description:
-          "Developed and maintained an enterprise leave management system using ASP.NET Core and Hangfire to integrate Odoo, Sunfish, and internal applications, enabling automated synchronization and centralized employee absence management.",
+          "Developed and maintained an enterprise leave management system using ASP.NET Core and Hangfire to integrate Odoo, Sunfish, and internal applications — reducing labor costs by over 70%, eliminating paper-based processes entirely, and cutting yearly administrative processing time by 95% through full automation of leave synchronization and absence management workflows.",
         techStack: [
           "ASP.NET Core",
           "Hangfire",
@@ -133,7 +145,7 @@ export const experiences: Experience[] = [
       {
         name: "Expiry Inventory Control – Ink & Grease Products",
         description:
-          "Designed and developed a real-time inventory labeling web application to support FIFO inventory management, automate production and expiry date labeling, and prevent up to 70% of annual repurchases caused by expired stock.",
+          "Designed and developed a real-time inventory labeling web application to support FIFO inventory management and automate expiry date labeling — preventing approximately $28,000 USD/year in losses from expired stock write-offs, urgent shipping costs, and label-related rework.",
         techStack: [
           "ASP.NET Core",
           "React.js",
@@ -167,7 +179,7 @@ export const experiences: Experience[] = [
       {
         name: "Laplace Project – Sequential Label Production System",
         description:
-          "Developed a web-based label production system using ASP.NET Core, React.js, REST APIs, ZPL, and ESC/POS label integration to generate dynamic label templates and improve manufacturing labeling accuracy.",
+          "Developed a web-based label production system using ASP.NET Core, React.js, REST APIs, ZPL, and ESC/POS label integration to automate sequential label generation across 4 product models — eliminating approximately 32 labor-hours/day of manual labeling and reducing double serial number rework by 100 pcs/day.",
         techStack: [
           "ASP.NET Core",
           "React.js",

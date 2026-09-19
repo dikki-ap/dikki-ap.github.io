@@ -62,3 +62,22 @@ export interface Profile {
   linkedin: string;
   profileImage: string;
 }
+
+/**
+ * A professional certification/badge.
+ *
+ * `issuer` is the company or body that issued it (e.g. "AWS") and is used to
+ * group certifications on the page. `level` is free-form on purpose so future
+ * levels from any issuer ("Associate", "Professional", "Expert", …) work
+ * without code changes — unknown levels fall back to a neutral badge style.
+ */
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  level: string;
+  issuedAt: string;
+  image: string;
+  /** Link to the official verification page. Opened in a new tab. */
+  verifyUrl: string;
+}

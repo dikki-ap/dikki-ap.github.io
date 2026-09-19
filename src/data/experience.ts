@@ -10,30 +10,18 @@ export const experiences: Experience[] = [
     description:
       "Developing and maintaining enterprise backend services and daemon processes in a large-scale enterprise environment. Focused on production reliability, system integration, monitoring automation, and CI/CD infrastructure — including a large-scale GitOps platform migration across GitLab EE, Jenkins, Nexus, Harbor, and ArgoCD, enabling automated deployments to Rancher-managed Kubernetes clusters.",
     responsibilities: [
+      "Conducted end-to-end requirement gathering and system analysis through structured stakeholder meetings, translating business needs into technical specifications, system architecture documents, and implementation plans accessible to both engineering teams and end users.",
       "Developed and maintained enterprise backend services and daemon processes using Java Spring Boot, ensuring reliable data synchronization, scheduling, and integration across cross-platform enterprise systems.",
-      "Designed and implemented monitoring, alerting, and automation workflows using Spring Boot schedulers, stored procedures, and Microsoft Teams webhooks to improve incident visibility and response time.",
-      "Optimized backend logic, SQL queries, and integration workflows, improving processing efficiency by 20–40%.",
-      "Led a large-scale CI/CD infrastructure migration: standardized GitLab group and project structures, rewrote Jenkinsfiles with clearly defined stage-by-stage pipelines for better visibility and maintainability, standardized Harbor container registry repositories with consistent naming conventions, managed private artifact repositories in Nexus, and implemented ArgoCD from scratch — enabling automated GitOps-based deployments to Rancher-managed Kubernetes clusters where no such automation previously existed.",
-      "Implemented release versioning, rollback procedures, and deployment safeguards to reduce production risk and support faster incident recovery.",
+      "Designed and implemented automated monitoring and alerting workflows using Spring Boot schedulers, stored procedures, and Microsoft Teams webhooks to proactively detect system anomalies and reduce incident response time.",
+      "Optimized backend logic, SQL queries, and integration workflows, improving processing efficiency by 20–40% across critical data synchronization services.",
+      "Designed and implemented a GitOps-based CI/CD pipeline using GitLab EE, Jenkins, Nexus, Harbor, ArgoCD, and Kubernetes, incorporating environment-specific Sync Windows, release versioning, Docker image tagging strategies, and GitOps rollback to enforce controlled production releases and support rapid incident recovery.",
       "Supported system integration and cross-platform communication across enterprise systems and HQ-managed platforms, ensuring data consistency and operational continuity.",
-      "Supported containerized application environments to improve deployment reliability, scalability, and production maintainability.",
     ],
     projects: [
       {
-        name: "Monitoring & Notification Automation",
-        description:
-          "Implemented monitoring, alerting, and notification workflows using Spring Boot schedulers, stored procedures, and Microsoft Teams webhooks to improve incident visibility and production response time.",
-        techStack: [
-          "Java",
-          "Spring Boot",
-          "Stored Procedures",
-          "Microsoft Teams Webhooks API",
-        ],
-      },
-      {
         name: "CI/CD Infrastructure Migration & ArgoCD Implementation",
         description:
-          "Led a comprehensive migration and modernization of the organization's CI/CD infrastructure. Standardized GitLab group and project structures across all repositories. Rewrote and standardized Jenkinsfiles with explicit, stage-by-stage pipeline definitions — replacing inconsistent legacy scripts with clear, maintainable workflows. Standardized Harbor container registry repositories with consistent naming conventions and access controls. Introduced and managed private artifact repositories in Nexus for internal dependency management. Designed and implemented ArgoCD from the ground up — the organization had no existing GitOps tooling — enabling automated, declarative application deployments to Rancher-managed Kubernetes clusters.",
+          "Led a comprehensive migration and modernization of the organization's CI/CD infrastructure. Designed and implemented an end-to-end GitOps CI/CD platform from scratch, migrating from the legacy HQ deployment process to the HQ-recommended GitOps platform using GitLab EE, Jenkins, Nexus Repository, Harbor, ArgoCD, and Kubernetes (Rancher). Rebuilt Jenkins pipelines and application configurations, established dedicated project and configuration repositories across 4 GitLab groups, and automated build, image versioning, and deployment for 48 applications across Development and Production environments, including production Sync Windows and GitOps-based rollback.",
         techStack: [
           "GitLab",
           "Jenkins",
@@ -46,28 +34,33 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        name: "Enterprise System Integration Monitoring",
-        description:
-          "Supported system integration and cross-platform communication monitoring to maintain stable data flow across enterprise systems and HQ-managed platforms, ensuring data consistency and operational continuity.",
-        techStack: ["Java", "Spring Boot", "SQL", "System Integration"],
-      },
-      {
         name: "DB Lock Kill Implementation",
         description:
           "Designed and implemented a self-service DB lock management interface enabling operators to identify and terminate blocking database sessions directly from the application UI during night shifts — eliminating dependency on the infrastructure team for on-call intervention and preventing production downtime caused by unresolved lock contention.",
         techStack: ["Java", "Spring Boot", "SQL", "Tibero"],
       },
       {
-        name: "Docker Image Size Optimization",
-        description:
-          "Analyzed and restructured Docker build configurations for backend alarm services, reducing image sizes by up to 70% through multi-stage builds and dependency pruning — significantly improving deployment speed and registry storage efficiency.",
-        techStack: ["Docker", "Harbor"],
-      },
-      {
         name: "Enterprise Web – Multi-Schema Table Data Management",
         description:
           "Extended the Table Data Management module to support multiple database schemas. Previously limited to a single schema via connection string, the module was enhanced with a schema selection dropdown allowing navigation into schema-specific master data. Table deletion operations are executed through Stored Procedures based on configurable conditions defined in the master data, enabling controlled and auditable data cleanup across multiple schemas.",
         techStack: ["Java", "Spring Boot", "Tibero"],
+      },
+      {
+        name: "Enterprise Monitoring & Alerting Platform",
+        description:
+          "Designed and built an automated monitoring system using Spring Boot schedulers and Microsoft Teams webhooks to continuously monitor critical data synchronization services and alert stakeholders in real time to anomalies, failures, and performance degradation, improving operational visibility and reducing mean time to detection.",
+        techStack: [
+          "Java",
+          "Spring Boot",
+          "SQL",
+          "Microsoft Teams Webhooks API",
+        ],
+      },
+      {
+        name: "Enterprise System Integration Monitoring",
+        description:
+          "Supported system integration and cross-platform communication monitoring to maintain stable data flow across enterprise systems and HQ-managed platforms, ensuring data consistency and operational continuity.",
+        techStack: ["Java", "Spring Boot", "SQL", "System Integration"],
       },
       {
         name: "System Monitoring WPF – Enhancements & Teams Integration",
@@ -80,6 +73,12 @@ export const experiences: Experience[] = [
           "Spring Boot",
           "Microsoft Teams Webhooks API",
         ],
+      },
+      {
+        name: "Docker Image Size Optimization",
+        description:
+          "Analyzed and restructured Docker build configurations for backend alarm services, reducing image sizes by up to 70% through multi-stage builds and dependency pruning — significantly improving deployment speed and registry storage efficiency.",
+        techStack: ["Docker", "Harbor"],
       },
     ],
     techStack: [
@@ -109,16 +108,16 @@ export const experiences: Experience[] = [
     responsibilities: [
       "Designed, developed, and deployed enterprise web applications using ASP.NET Core, React.js, and SQL-based relational databases to automate business processes and support cross-department system integration.",
       "Analyzed business requirements and translated them into technical system designs, application workflows, database structures, and scalable implementation plans.",
-      "Developed and maintained REST APIs, real-time application features, and system integration workflows to support manufacturing, inventory, HR, and production planning processes.",
-      "Created and maintained technical documentation including system architecture diagrams, ERD, integration flow diagrams, functional specifications, and project timelines.",
+      "Developed and maintained REST APIs, real-time application features, and system integration workflows supporting manufacturing, inventory, HR, and production planning processes.",
+      "Created and maintained technical documentation, including system architecture diagrams, ERDs, integration flow diagrams, and project specifications to ensure long-term maintainability and team alignment.",
       "Improved existing applications by optimizing application logic, database queries, and deployment workflows to enhance performance, scalability, and maintainability.",
-      "Automated build and deployment processes using GitLab CI, GitHub Actions, Docker, and AWS services including ECS, EC2, ECR, and Lambda.",
+      "Automated build and deployment processes using GitLab CI, GitHub Actions, Docker, and AWS services including ECS, EC2, ECR, EFS, RDS, Route 53, Security Groups, IAM Roles & Policies, Auto Scaling Group, and Lambda.",
     ],
     projects: [
       {
         name: "Apollo Project – Real-Time Production Management System",
         description:
-          "Designed and developed a real-time production management web application to enable real-time monitoring, streamline manufacturing operations, and reduce production processing time by 75% through workflow automation and cycle time optimization.",
+          "Designed and developed a real-time production management web application using ASP.NET Core, React.js, REST APIs, and SignalR WebSocket to enable real-time monitoring, streamline manufacturing operations, and reduce production processing time by 75% through workflow automation and cycle time optimization.",
         techStack: [
           "ASP.NET Core",
           "React.js",
@@ -131,7 +130,7 @@ export const experiences: Experience[] = [
       {
         name: "E-Leave Project – Employee Leave Management System",
         description:
-          "Developed and maintained an enterprise leave management system using ASP.NET Core and Hangfire to integrate Odoo, Sunfish, and internal applications — reducing labor costs by over 70%, eliminating paper-based processes entirely, and cutting yearly administrative processing time by 95% through full automation of leave synchronization and absence management workflows.",
+          "Developed and maintained an enterprise leave management system using ASP.NET Core and Hangfire to integrate Odoo, Sunfish, and internal applications, reducing labor costs by over 70%, eliminating paper-based processes, and cutting annual administrative processing time by 95% through automated leave synchronization and absence management workflows.",
         techStack: [
           "ASP.NET Core",
           "Hangfire",
@@ -145,7 +144,7 @@ export const experiences: Experience[] = [
       {
         name: "Expiry Inventory Control – Ink & Grease Products",
         description:
-          "Designed and developed a real-time inventory labeling web application to support FIFO inventory management and automate expiry date labeling — preventing approximately $28,000 USD/year in losses from expired stock write-offs, urgent shipping costs, and label-related rework.",
+          "Designed and developed a real-time inventory labeling web application using ASP.NET Core, React.js, REST APIs, and SignalR to support FIFO inventory management and automate expiry date labeling, preventing approximately $28,000 USD per year in losses from expired stock write-offs, urgent shipping costs, and label-related rework.",
         techStack: [
           "ASP.NET Core",
           "React.js",
@@ -158,7 +157,7 @@ export const experiences: Experience[] = [
       {
         name: "AWS & On-Premise Containerization Projects",
         description:
-          "Designed and implemented containerized application deployment architecture using Docker, AWS ECS, EC2, ECR, and on-premise Rocky Linux servers to support scalable, reliable, and portable enterprise application deployments.",
+          "Designed and implemented containerized deployment architectures using Docker, AWS ECS, EC2, ECR, EFS, RDS, Route 53, Security Groups, IAM Roles & Policies, Auto Scaling Group, Lambda, and on-premise Rocky Linux servers to support scalable, reliable, and portable enterprise application deployments.",
         techStack: [
           "Docker",
           "AWS ECS",
@@ -169,17 +168,17 @@ export const experiences: Experience[] = [
           "AWS Lambda",
           "AWS RDS",
           "AWS S3",
-          "AWS Auto Scalling Group",
+          "AWS Auto Scaling Group",
           "AWS EFS",
           "AWS Security Group",
-          "AWS IAM Roles",
+          "AWS IAM Roles & Policies",
           "Rocky Linux",
         ],
       },
       {
         name: "Laplace Project – Sequential Label Production System",
         description:
-          "Developed a web-based label production system using ASP.NET Core, React.js, REST APIs, ZPL, and ESC/POS label integration to automate sequential label generation across 4 product models — eliminating approximately 32 labor-hours/day of manual labeling and reducing double serial number rework by 100 pcs/day.",
+          "Developed a web-based label production system using ASP.NET Core, React.js, REST APIs, ZPL, and ESC/POS label integration to automate sequential label generation across 4 product models, eliminating approximately 32 labor-hours per day of manual labeling, reducing double serial number rework by 100 units per day, and significantly decreasing mislabeling-related production defects.",
         techStack: [
           "ASP.NET Core",
           "React.js",
@@ -220,6 +219,6 @@ export const experiences: Experience[] = [
       "Developed mobile applications using Flutter and built backend APIs with Laravel to support user requirements, application integration, and data management.",
     ],
     projects: [],
-    techStack: ["Flutter", "Dart", "Laravel", "PHP", "REST APIs"],
+    techStack: ["Flutter", "Laravel", "REST APIs"],
   },
 ];
